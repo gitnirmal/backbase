@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+    <link rel="stylesheet" href="styles/base.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <g:preferences>
+            <!--<g:preference label="Feed URL" name="feed" type="text" viewHint="user" />
+            <g:preference label="Feed type" name="feedtype" type="radio" default="rss" viewHint="user">
+                <g:enumeration label="Atom" value="atom" />
+                <g:enumeration label="RSS" value="rss" />
+            </g:preference>-->
+            <g:preference label="Show only headlines" name="onlyheadlines" type="checkbox" default="false" viewHint="user" />
+            <!--<g:preference label="Maximum number of displayed feeds" name="maxnumber" type="range" min="1" max="10" viewHint="user" />
+            <g:preference label="The refresh rate in minutes" name="refreshrate" type="range" min="5" max="60" step="5" default="30" viewHint="user" />-->
+    </g:preferences>
+
+
+</head>
+
+<body g:onload="requireWidget(__WIDGET__, 'scripts/main')"
+    class="lp-todo-widget ng-cloak">
+    <div lp-template="'templates/main.ng.html'"></div>
+</body>
+</html>

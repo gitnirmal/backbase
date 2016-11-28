@@ -1,0 +1,37 @@
+<div ng-controller="MainCtrl as mainCtrl">
+    <!-- Add NG Template here-->
+    <div class="container">
+
+	    <h1>Todo widget</h1>
+
+	    <form name="frm" ng-submit="mainCtrl.addTask(data)">
+		  <div class="form-group">
+		    <label for="taskTitle">Task description</label>
+		    <input type="text" class="form-control" id="taskTitle" placeholder="Enter task description" ng-model="data.description">
+		  </div>
+		  <button type="submit" class="btn btn-default">Add Task</button>
+		</form>
+
+		<br/>
+
+		<table class="table table-bordered">
+		  <thead>
+		  	<tr>
+		  		<th>#</th>
+		  		<th>Description</th>
+		  		<th>Option</th>
+		  	<tr>
+		  </thead>
+		  <tbody>
+		  	<tr ng-repeat="item in mainCtrl.tasks">
+		  		<td><input type="checkbox" ng-change="mainCtrl.completeTask($index)" ng-model="item.complete"></td>
+		  		<td ng-class="{'complete-task':item.complete}">{{item.description}}</td>
+		  		<td><button type="button" class="btn btn-danger btn-xs" ng-click="mainCtrl.removeTask($index)">Remove</button></td>
+		  	</tr>
+		  </tbody>
+		</table>
+
+	</div>
+
+
+</div>
