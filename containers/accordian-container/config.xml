@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w3c:widget xmlns:w3c="http://www.w3.org/TR/widgets"
+    xmlns:bb="http://www.backbase.com/ns/widgets"
+    xmlns="http://www.w3.org/1999/xhtml">
+
+    <bb:resources>
+        <link rel="stylesheet" type='text/css' href="styles/accordian-container.css"/>
+        <script type="text/javascript" src="$(contextRoot)/templates/accordianTemplate/template.js"></script>
+        <script type="text/javascript" src="scripts/accordian-container.js"></script>
+    </bb:resources>
+</w3c:widget>

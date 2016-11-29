@@ -1,0 +1,51 @@
+{namespace templates_accordianTemplate}
+/**
+ * Container Template
+ * @param item Item in context
+ */
+{template .accordianTemplate}
+    <div class="bp-container c-accordiantemplate bp-ui-dragRoot bp-accordian_container" data-pid="{$item.name}">
+        
+
+        <section>
+            <header>
+                <a class="acc-tab" href="#" data-target="acc-panel-0">First Panel</a>
+            </header>
+            <section class="acc-panel acc-panel--area bp-area acc-panel-0">
+                {foreach $child in $item.children}
+                    {if parseInt($child.preferences.area.value) == 0}
+                        {include($child) |noAutoescape}
+                    {/if}
+                {/foreach}
+            </section>
+        </section>
+
+        <section>
+            <header>
+                <a class="acc-tab" href="#" data-target="acc-panel-1">Second Panel</a>
+            </header>
+            <section class="acc-panel acc-panel--area bp-area acc-panel-1">
+                {foreach $child in $item.children}
+                    {if parseInt($child.preferences.area.value) == 1}
+                        {include($child) |noAutoescape}
+                    {/if}
+                {/foreach}
+            </section>
+        </section>
+
+        <section>
+            <header>
+                <a class="acc-tab" href="#" data-target="acc-panel-2">Third Panel</a>
+            </header>
+            <section class="acc-panel acc-panel--area bp-area acc-panel-2">
+                {foreach $child in $item.children}
+                    {if parseInt($child.preferences.area.value) == 2}
+                        {include($child) |noAutoescape}
+                    {/if}
+                {/foreach}
+            </section>
+        </section>
+
+
+    </div>
+{/template}
